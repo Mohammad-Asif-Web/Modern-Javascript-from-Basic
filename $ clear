@@ -1,0 +1,75 @@
+[1mdiff --git a/23__object in JS.js b/23__object in JS.js[m
+[1mindex 9a92741..f25fe4a 100644[m
+[1m--- a/23__object in JS.js[m	
+[1m+++ b/23__object in JS.js[m	
+[36m@@ -27,23 +27,60 @@[m [mdocument.write("how to access the object");[m
+ document.write("<ul><li> dot notation</li></ul>")[m
+ document.write("just use this <br><code> asif.fullName</code><br>then the code will execute")[m
+ document.write("<ul><li> bracket notation</li></ul>");[m
+[31m-document.write("Write <br><code> asif['fullname']</code><br>then the code will execute")[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-[m
+[32m+[m[32mdocument.write("Write <br><code> asif['fullname']</code><br>then the code will execute<br><br>");[m
+ [m
+[32m+[m[32m//  Add new item inside object[m
+[32m+[m[32mdocument.write("Add new item inside object<br>");[m
+[32m+[m[32masif.zipcode = 1200[m
+[32m+[m[32mdocument.write("name: " + asif.fullName + "<br>Age: " + asif.age + "<br> address: " + asif.place + "<br> job: " + asif.job + "<br> zipcode: " + asif.zipcode);[m
+[32m+[m[32mdocument.write("<br><br>");[m
+[32m+[m[32m// console.log(asif);[m
+ [m
+[32m+[m[32m// Changing an existing item in object[m
+[32m+[m[32mdocument.write("Change an existing item in object<br>");[m
+[32m+[m[32masif.place = "R, M, Das, Road, Sutrapur"[m
+[32m+[m[32mconsole.log(asif);[m
+[32m+[m[32mdocument.write("<br>");[m
+ [m
+[32m+[m[32m//  Save function in object[m
+[32m+[m[32mdocument.write("Save function in object<br>")[m
+[32m+[m[32masif.msg = function(){[m
+[32m+[m[32m    document.write("Hello, asif")[m
+[32m+[m[32m}[m
+[32m+[m[32masif.msg();[m
+ [m
+[32m+[m[32masif.myvar = function(a, b){[m
+[32m+[m[32m    var result = a + b;[m
+[32m+[m[32m    return result[m
+[32m+[m[32m}[m
+ [m
+[32m+[m[32mconsole.log(asif.myvar(5, 5));[m
+[32m+[m[32mdocument.write("<br><br>");[m
+ [m
+[32m+[m[32m//  Creating array inside object[m
+[32m+[m[32mdocument.write("Creating array inside object<br>")[m
+[32m+[m[32mvar student = {[m
+[32m+[m[32m    name: "asif",[m
+[32m+[m[32m    subject: ["English", "physics", "math"],[m
+[32m+[m[32m    roll: 1540,[m
+[32m+[m[32m    course: ["computer", "electronics", "civil"][m
+[32m+[m[32m}[m
+[32m+[m[32mdocument.write(student.subject[1]);[m
+[32m+[m[32mdocument.write("<br>");[m
+[32m+[m[32mdocument.write(student.course[0])[m
+[32m+[m[32mdocument.write("<br><br>");[m
+ [m
+[32m+[m[32m//  creating object inside arrayy[m
+[32m+[m[32mdocument.write("creating object inside arrayy<br>")[m
+[32m+[m
+[32m+[m[32mvar arrObj = ['Zonayed',[m[41m [m
+[32m+[m[32m    {name: 'Rafiq',[m[41m [m
+[32m+[m[32m    age: 21,[m[41m [m
+[32m+[m[32m    job: 'Student'[m
+[32m+[m[32m    },[m[41m [m
+[32m+[m[32m    'Bangladesh'];[m
+[32m+[m[32mconsole.log(arrObj);[m
+[32m+[m[32mconsole.log(arrObj[1]);[m
+ [m
+ [m
+ [m
