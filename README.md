@@ -49,9 +49,13 @@ After learning JavaScript basics (up through the Objects lesson), try applying J
 
 <p style="font-size: 23px">License & Copyright<p>
 &copy Muhammad Asif, Institute of Science and technology(IST)<br>
-Licensed under the <a src="LICENSE">MIT License</a>
+
+Licensed under the [MIT License](LICENSE)
 
 <br><br>
 <p align = "center" style="height: 500px;">
 <img  src="1f642.svg"/>
 </p>
+
+
+
