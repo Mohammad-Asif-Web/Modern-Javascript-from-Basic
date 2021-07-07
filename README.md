@@ -49,7 +49,7 @@ After learning JavaScript basics (up through the Objects lesson), try applying J
 
 <p style="font-size: 23px">License & Copyright<p>
 &copy Muhammad Asif, Institute of Science and technology(IST)<br>
-Licensed under the [MIT License](LICENSE).
+Licensed under the <a src="LICENSE">MIT License</a>
 
 <br><br>
 <p align = "center" style="height: 500px;">
