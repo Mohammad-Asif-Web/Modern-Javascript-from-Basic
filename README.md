@@ -45,9 +45,15 @@ After learning JavaScript basics (up through the Objects lesson), try applying J
 <li>Build web applications with React</li>
 </ul>
 
+# Contribution
+
+I highly encourage the community to step forward and improve this project further. You can fix any reported bug, propose or implement new features, write tests, etc.
+
+Pull requests are welcome! See the [contributor guidelines](https://github.com/Mohammad-Asif-Web/Javascript-Basic-Explanations/blob/master/CONTRIBUTING.md) for more details.
+
 #
 
-<p style="font-size: 23px">License & Copyright<p>
+<p style="font-size: 28px">License & Copyright<p>
 &copy Muhammad Asif, Institute of Science and technology(IST)<br>
 
 Licensed under the [MIT License](LICENSE)
