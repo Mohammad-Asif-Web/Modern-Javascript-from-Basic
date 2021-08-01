@@ -1,4 +1,4 @@
-document.write("<h1>Tutorial No. 26 -- Scope and Hoisting explained in Javascript</h1>");
+document.write("<h1>Tutorial No. 27 -- Scope and Hoisting explained in Javascript</h1>");
 
 //Global Variable - Global Scope -- we can use this scoped in everywhere.
 var globalVar = "I am Global<br>";  //global scoped
