@@ -1,4 +1,4 @@
-// document.write("<h1>Tutorial No. 29 -- Immediately Invoked Function Expressions (IIFE) in Javascript</h1>");
+document.write("<h1>Tutorial No. 29 -- Immediately Invoked Function Expressions (IIFE) in Javascript</h1>");
 
 // আমাদের সাধারনত কোনো ফাংশন বানানোর পর পরে সেটাকে কল করে ইউজ করতে হয়। কিন্তু যদি আমরা ফাংশন বানানোর সাথে সাথেই সেটাকে কল করতে চাই সেক্ষেত্রে আমরা ইফি Immediately Invoked Function Expressions (IIFE) টেকনিক ইউজ করতে পারি।
 
