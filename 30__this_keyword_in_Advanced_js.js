@@ -107,3 +107,26 @@ var newObj = {
 }
 // newObj.subject.msg();
 newObj.subject.msg.call(newObj.college);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
