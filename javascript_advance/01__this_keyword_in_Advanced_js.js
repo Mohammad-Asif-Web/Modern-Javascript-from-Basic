@@ -109,24 +109,3 @@ var newObj = {
 newObj.subject.msg.call(newObj.college);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
