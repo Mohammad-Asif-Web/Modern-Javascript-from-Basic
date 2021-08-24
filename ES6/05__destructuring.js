@@ -1,0 +1,22 @@
+// document.write("<h1>Tutorial No. 05 -- Destructuring in Javascript ES6</h1>");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
