@@ -109,7 +109,9 @@ lex56.aFunc()();
 //  MDN REFERENCE
 const materials = ['hydrogen', 'boron', 'oxygen', 'beryllium'];
 
-console.log(materials.map(element => element.length));
+// console.log(materials.map(element => element.length));
+console.log(materials.map((element, index) => `${index}: ${element.length}`))
+
 
 // Comparing traditional functions to arrow functions
 const trad = function(a){
