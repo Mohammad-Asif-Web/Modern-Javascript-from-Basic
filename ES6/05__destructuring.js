@@ -12,20 +12,92 @@ const muhammad6 = ['asif', 25, 'engineer'];
 const [name6, age6, job6] = muhammad6;
 console.log(`${name6} - ${age6} - ${job}`);
 
-//  Destructuring Objects
-const zonayedObj = {
-    nameObj: 'Zonayed Ahmed',
-    ageObj: 21,
-    professionalObj: 'Student'
-}
-var nameObj5 = zonayedObj.nameObj;
-var ageObj5 = zonayedObj.ageObj;
-var professionalObj5 = zonayedObj.professionalObj;
-console.log(`${nameObj5} - ${ageObj5} - ${professionalObj5}`);
+//In ES6 --- Array Destructuring
+const number = [10, 20, 30, 40 , 50];
+let [num1, num2, ...z] = number
+console.log(num1);
+console.log(num2);
+console.log(z);
+console.log(z[0]);
+console.log(z[1]);
+console.log(z[2]);
 
-//In ES6
-const {nameObj6, ageObj6, professionalObj6} = zonayedObj;
-console.log(`${nameObj6}`);
+//  swap variables
+let a, b;
+a = 10;
+b = 20;
+[a,b] = [b,a]
+console.log(a);
+console.log(b);
+
+//  basic objects destructuring
+const student = {
+    id : 50,
+    fullName : 'asif',
+    gpa : 3.50
+}
+const {id, gpa, fullName} = student;
+console.log(id);
+console.log(gpa);
+console.log(fullName);
+
+// nested objects destructuring
+
+const country = {
+    cName : 'bangladesh',
+    zila : 64,
+    language : {
+        native : 'bangla',
+        standard : 'english',
+        other : 'hindi'
+    }
+}
+const {cName, zila, language:{native, standard, other}} = country;
+console.log(cName);
+console.log(zila);
+console.log(native);
+console.log(standard);
+console.log(other);
+
+// destructuring Functions with multiple parameters with variables
+
+const vehicle = (car, bike) => {
+    let {volvo, tesla, bmw} = car;
+    let {yamaha, honda, favorite: {first, second}} = bike
+    console.log(` 
+    volvo is ${volvo} car,
+    tesla is ${tesla} car,
+    BMW is ${bmw} car.
+    first choice is ${first},
+    second choice is ${second},
+    third choice is ${honda}
+    `);
+}
+
+let car = {
+    volvo : 'american',
+    tesla : 'european',
+    bmw : 'canadian'
+}
+let bike = {
+    yamaha : 'R15',
+    honda : 'xBlade',
+    favorite : {
+        first : 'FZS',
+        second : 'MT15'
+    }
+}
+vehicle(car, bike);
+
+
+
+
+
+
+
+
+
+
 
 
 
