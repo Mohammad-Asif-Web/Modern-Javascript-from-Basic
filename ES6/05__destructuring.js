@@ -89,6 +89,93 @@ let bike = {
 }
 vehicle(car, bike);
 
+//  Skipping index number destructuring --- we can skip any index number by ','comma
+const player = ['sakib', 'rahim', 'mushfique', 'riyad', 'tamim', 'fizz'];
+const [name1, name2, , , , x] = player;
+console.log(name1); 
+console.log(x);
+
+
+//  declare a new title to variable --- use colon: then write new variable titile
+const police = {
+    policeName : 'ajmal sheikh',
+    age : '35',
+    address : {
+        district : 'kurigram',
+        subDistrict : 'sadar',
+        code : 3300
+    }
+}
+
+const {policeName: newName, age:hisAge, address: {district: hisdistrict, subDistrict: hisSub}} = police;
+
+console.log(newName);
+console.log(hisAge);
+console.log(hisdistrict);
+console.log(hisSub);
+
+// default variables destructuring
+const army = {
+    armyName : 'muhammad',
+    armyAge : 30,
+
+    // if we comment spouse property, then the output will displayed default value "your spouse name here"
+    //or if we uncomment spouse property, then the output will displayed "tahmina" value.
+    spouse : "tahmina",     //just comment or uncomment to see the output of "spouse"
+    country : {
+        countryName : 'Bangladesh',
+        continental : 'Asia',
+        planet : 'Earth',
+        subPlanet : {}
+    }
+}
+const {armyName, armyAge, spouse = "your spouse name here"} = army;
+console.log(armyName);
+console.log(spouse);
+
+
+// Rest parameter Destructuring
+const navy = {
+    navyName : "barbarosa",
+    navyAge : 38,
+    navyCountry : "Turkey",
+    navyAttack : 20,
+    attackWon : 18
+}
+const {navyName, navyAge, ...navyOther} = navy;
+console.log(navyOther);
+// Also we we can Destructure from REst..parameters
+const {navyCountry, navyAttack, attackWon} = navyOther;
+console.log(navyCountry);
+console.log(attackWon);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
