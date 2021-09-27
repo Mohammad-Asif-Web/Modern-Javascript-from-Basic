@@ -1,0 +1,32 @@
+.box {
+    margin: 0 auto;
+    width: 240px;
+  }
+  
+  .box .box-content {
+    background-color: grey;
+    height: 30px;
+    text-align: center;
+    color: #fff;
+    line-height: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 15px;
+  }
+  
+  #box-1 {
+    background-color: #ff3c41;
+    
+  }
+  
+  #box-2 {
+    background-color: #b9f;
+  }
+  
+  #box-3 {
+    background-color: #0ebeff;
+  }
+  
+  #box-4 {
+    background-color: #47cf73;
+  }
