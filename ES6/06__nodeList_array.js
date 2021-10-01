@@ -94,6 +94,133 @@ console.log(fish);
 fish.splice(-2, 1);
 console.log(fish);
 
+//  Array ConCat() Method --
+//  Syntax -- concat(), concat(value0), concat(value0, value1), concat(value0, value1, ... , valueN)
+const con = ['a', 'b', 'd'];
+const cat = ['e', 'f', 'g'];
+console.log(con.concat(cat));
+//concat numbers and strings
+const conNum = [2, 4, 6, 8, 10];
+const conStr = ['a', 'e', 'i', 'o', 'u'];
+console.log(conStr.concat(conNum));
+//ConCat nested Array
+const nest1 = [[1]];
+const nest2 = [2, [3], 4];
+let nest = nest1.concat(nest2);
+console.log(nest);
+nest.push([5])
+console.log(nest);
+
+//  Push() Method -- The push() methods add one or more elements to the ends of an array
+//  Syntax -- push(element), push(element0, element1)
+const pusAni = ['horse', 'goats', 'sheep'];
+pusAni.push('cat');
+console.log(pusAni);
+pusAni.push('chickens', 'dogs', 'crow');
+console.log(pusAni);
+// using an object in an array
+let obj = {
+    length: 0,
+
+    addElem: function add(element) {
+        // obj.length is automatically incremented
+        // every time an element is added.
+        [].push.call(this, element)
+    }
+}
+
+// Let's add some empty objects just to illustrate.
+obj.addElem({})
+obj.addElem({})
+console.log(obj.length)
+
+//  Map() method -- its behave like a for loop --- It doesn't affect on main array value
+// Syntax -- map((element) => { ... }), map((element, index) => { ... }), map((element, index, array) => { ... })
+const mapArray = [0, 1, 3, 5, 7, 9, 2, 4];
+const mapResult = mapArray.map((element) => element * 2);
+console.log(mapResult);
+//get a square root of an aray
+const square = [1, 4, 9, 16, 25, 36];
+const squareResult = square.map((num) =>{
+    return Math.sqrt(num);
+})
+console.log(squareResult);
+// get an array of ASCII encoding byte from a STRING
+let Map = Array.prototype.map
+let strResult = Map.call("Muhammad asif", (x) => {
+    return x.charCodeAt(0);
+})
+console.log(strResult);
+//  Using querySelectorAll to map()
+let elems = document.querySelectorAll("box-content")
+let values = Array.from(elems, (obj) =>{
+    return obj.value;
+})
+console.dir(values);
+//  Convert string lower to uppercase -- it doesn't changes the value of main array
+const names = ['asif', 'tamim', 'sakib', 'abeer'];
+const nameResult = names.map((name) => {
+    return name.toUpperCase();
+})
+console.log(nameResult);
+console.log(names);
+// finding value of objects in array with map method
+const objNew = [
+    {
+        name : 'muhammad',
+        age : 25
+    },
+    {
+        name : 'lemon',
+        age : 24
+    },
+    {
+        name : 'naeem',
+        age : '28'
+    },
+    {
+        name : 'khalid',
+        age : 65
+    }
+]
+const objResult = objNew.map((element) =>{
+    return `name : ${element.name}, age : ${element.age}`
+})
+console.log(objResult);
+//Using map to reformat objects in an array-- using from the previous object value
+const objInArr = objNew.map((arr) =>{
+    let obj2 = {};
+    obj2[arr.name] = arr.age;
+    return obj2;
+})
+console.log(objInArr);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
