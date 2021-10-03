@@ -48,8 +48,7 @@ console.log(findFruits);
 console.log(fruits[findFruits]);
 
 
-//  Array filter() Method
-//find element by length
+//  Array filter() Method -- finds element by length
 
 const words = ["spray", "limit", "elite", "exeburant", "destruction", "present"];
 const wordResult = words.filter((word) => word.length > 5);
@@ -234,12 +233,25 @@ console.log(min);
 const sum = [0, 1, 2, 3];
 const sumResult = sum.reduce((num1, num2) => num1 + num2);
 console.log(sumResult);
+//Flatten an array of arrays
+let flatten = [[0,1],[2, 3], [4, 5], [6, 7]];
+const flatResult = flatten.reduce((a, b) =>{
+    return a.concat(b);
+}, []);
+console.log(flatResult);
 
-
-
-
-
-
+//  Counting instances of values in an object
+const propName = ['asif', 'roxy', 'mehmet', "roxy", "kawser"];
+const propResult = propName.reduce((element, value) => {
+    if(value in element){
+        element[value]++
+    }
+    else{
+        element[value] = 1;
+    }
+    return element;
+}, {});
+console.log(propResult);
 
 
 
