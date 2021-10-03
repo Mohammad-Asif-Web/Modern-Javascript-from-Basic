@@ -253,31 +253,15 @@ const propResult = propName.reduce((element, value) => {
 }, {});
 console.log(propResult);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//  Remove Duplicates item in an array
+const duplicate = ['a', 'b', 'd', 'b', 'h', 'a', 'a', 'c', 'g', 'e', 'c', 'f', 'f'];
+const emptyValue = []
+const duplicateResult = duplicate.reduce((preValue, currValue) => {
+    if( preValue.indexOf(currValue) === -1 ){
+        preValue.push(currValue);
+    }
+    return preValue;
+}, emptyValue);
+let duplicateSort = duplicateResult.sort();
+console.log(duplicateSort);
 
