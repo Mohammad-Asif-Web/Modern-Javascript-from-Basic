@@ -41,6 +41,36 @@ const rest = (names, age, ...others) =>{
 };
 rest('asif', 25, "web developer", "UI/UX Designer");
 
+//  In this example, the first argument is mapped to a and the second to b, so these named arguments are used as normal.
+const myFun = (a, b, ...args) =>{
+    return `a : ${a}
+            b : ${b}
+            more : ${args}`
+};
+console.log(myFun("one", "two", "three", "four", "five...etc"));
+
+//  Multiply the element using rest parameter with ordinary parameters
+const multi = (ordinary, ...rest) =>{
+    return rest.map(element => {
+        return `addition is ${element * ordinary}`
+    });
+};
+const multiResult = multi(2, 10, 25, 50)
+console.log(multiResult);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
