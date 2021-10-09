@@ -43,6 +43,27 @@ squareResult.placeName = 'Dhaka'
 console.log(squareResult.place);
 
 
+//  Static methods and properties
+const Point = class{
+    constructor(x, y){
+        this.x = x;
+        this.y = y;
+    }
+    static displayName = 'this is  point';
+    static distance(a, b) {
+        let num1 = a + b;
+        let num2 = a * b;
+        let numResult = num1 + num2;
+        return numResult;
+    }
+}
+//   this will displayed undefined, because static method doesn't called by new variable.
+let pointResult = new Point(5, 5);
+console.log(pointResult.displayName);
+console.log(pointResult.distance);
+//  to see the output of static method, here don't need to assign static value to a new variable, directly we can call the static method by class name.
+console.log(Point.displayName);
+console.log(Point.distance(5, 5));
 
 
 //  class declaration
