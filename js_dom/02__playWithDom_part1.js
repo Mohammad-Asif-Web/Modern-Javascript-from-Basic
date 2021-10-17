@@ -11,11 +11,8 @@
 // innerHTML            // textColor
 // nextSibling          // value
 
-
-
-
-
-
+//      javascript color text design
+console.log('%cThis is javascript color text', "color: green");
 
 
 
