@@ -52,13 +52,113 @@ link.addEventListener('click', function(event){
 
                   // 4. Native DOM Event
 // Basically, we create an event and this event works. But if we want we can run this event by code.
-clickMeBtn.click(); // As soon as you enter this code, you will see that a click event has taken place on the button. this happened by click handler which is attached in previous. As like more events -- focus, blur, submit can be run.
+clickMeBtn.click(); // As soon as you enter this code, you will see that a click event has takn place on the button. this happened by click handler which is attached in previous. As like more events -- focus, blur, submit can be run.
 
 
                   // 5. Event Delagation
+var box4 = document.getElementById('box4');
+box4.addEventListener('click', function(event){
+   if(event.target.tagName === 'LI'){
+      console.log("List Item Clicked");
+   }
+});
+// const ul = document.querySelector('#box4 ul');
+// const li = document.createElement('li');
+// li.innerText = 'this is new LI';
+// ul.prepend(li);
+// let liStyle = {
+//    background: 'green',
+//    color: '#fff',
+//    border: '1px solid #fff',
+//    fontSize: '1rem',
+//    display: 'inline-block',
+//    padding: '5px 20px'
+// };
+// Object.assign(li.style, liStyle)
+//The pattern of capturing and handling bubble-up events in this way is basically called event delegation.
 
 
+                     // 6. Form Event
+const inputs = document.querySelectorAll('input');
+console.log(inputs);
+const submitBtn = document.querySelector('button[type="submit"]');
+console.log(submitBtn);
 
+// i. Input Field change Event -- Now this change event will happen if we type something in our first input field and click elsewhere, and at the same time we will see the desired result in the console:
+inputs[0].addEventListener('change', function(){
+   console.log('changed inputs');
+})
+// We can take the input field value from here and also we can update real time data.
+inputs[0].addEventListener('change', function(event){
+   console.log(event.target.value);
+})
                   
+// ii. Form Submit Event --   If you click on the submit button in our form, you will see that the browser has reloaded, this is the default behavior of the browser. We can easily prevent that by default behavior in the way we showed a little earlier.
+submitBtn.addEventListener('click', function(event){
+   event.preventDefault();
+});
+
+// For example, if I want the user to submit a form leaving the input field blank, I will show an alert.
+submitBtn.addEventListener('click', function(event){
+   event.preventDefault();
+   if(inputs[0].value === '' || inputs[1].value === ''){
+      alert('Input field can not be empty')
+   } 
+})
+// Now if we want to do something more interesting, like if we have both fields, we want to show the data inside
+submitBtn.addEventListener('click', function(event){
+   event.preventDefault();
+   if(inputs[0].value === '' || inputs[1].value === ''){
+      alert('Input field can not be empty')
+   } else{
+      console.log(`Your name: ${inputs[0].value}, Your Email: ${inputs[1].value}`);
+   }
+})
 
 
+
+                     // 7. Key-Board Event
+//When we press a key, three kinds of events can happen.
+
+// i. keydown Event -- The key has been pressed but the system has not yet registered. 'Keydown' is used to handle it. Now we have to apply the keyboard events on our document as it will be on top of the whole document. Everything else is the same as before
+document.addEventListener('keydown', function(){
+   console.log('Key Down Event is ');
+})
+
+// ii. keypress Event --This event occurs as soon as the keystroke is registered in the system. Everything else is the same as before
+ document.addEventListener('keypress', function(){
+    console.log('Key Press Event');
+ })
+
+ // iii. keyup Event -- This event occurs when the key is pressed
+ document.addEventListener('keyup', function(){
+    console.log('Key Up Event');
+ })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// var a, b, c, d, e, f;
+// a = 'learn';
+// b = 'about';
+// c = 'string';
+// d = 'variable';
+// e = 'in';
+// f = 'javascript';
+
+// result = `${c[3]} ${a[0] + b[2] + d[0] + d[7]} ${b[3]}`
+// console.log(result);
