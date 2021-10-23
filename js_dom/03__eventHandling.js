@@ -116,7 +116,6 @@ submitBtn.addEventListener('click', function(event){
 })
 
 
-
                      // 7. Key-Board Event
 //When we press a key, three kinds of events can happen.
 
@@ -135,17 +134,60 @@ document.addEventListener('keydown', function(){
     console.log('Key Up Event');
  })
 
+ //For example, if we want to know exactly which key has been pressed, we can access it and show it with the help of that event parameter:
+document.addEventListener('keydown', function(event){
+   console.log('key Down Pressed: ' + event.key);
+}) // this way, we can access other handlers
+
+// here, we have use 'event' as handler parameter, but if we open it, we can see what methods we can access by this 'event'
+document.addEventListener('keyup', function(event){
+   console.dir(event);
+})
 
 
+                     // 8. Mouse Event
+// Mouse have same special events as key board events.
+
+// i. mouseover -- this event occurs when mouse over any element. now we can do this with box 1 button
+clickMeBtn.addEventListener('mouseover', function(){
+   console.log('On Mouse Over Using addEventListener');
+})
+
+// ii. mouseout -- this event occurs when we mouse out from any element. now we will add this event to same button.
+clickMeBtn.addEventListener('mouseout', function(){
+   console.log('On Mouse Out');
+})
 
 
+                  // 9. Browser Event
+// i. Event after Browser Fully Loaded -- We may want that the contents of our page be shown to the user as soon as it is fully loaded, and a loader be displayed during loading. In such a situation this load event is quite useful. This event will happen as soon as everything in our document is loaded. And we will apply this event on the 'window'
+window.addEventListener('load', function(){
+   console.log('this is load event output');
+})
+
+// ii. only MarkUp is loaded -- sometimes we need to take an action after MarkUp is loaded. So in this situation 'DOMContentLoaded' event is quite useful. Since this is a matter of our document, I will apply the event on the document
+document.addEventListener('DOMContentLoaded', function(){
+   console.log('DOMContentLoaded event after Markup Ready');
+})
+
+// iii. Event after loading a certain element -- In box2 has two image valid and unvalid. first we will select those image.
+var img1 = document.querySelector('img[alt=valid-img]');
+var img2 = document.querySelector('img[alt=invalid-img]');
+// a. After loading the element -- if we want to take any action after loading the img1 element.
+img1.addEventListener('load', function() { console.log('Image 1 Has Successfully Loaded!'); });
+// b. If the element can not be loaded -- The image did not load due to incorrect source in our second image. Now another error type event could happen in such a situation, and we can take action on that too:
+img2.addEventListener('error', function(){
+   console.log('Image Can no be Loaded');
+})
 
 
-
-
-
-
-
+                  // 10. Old Browser Problem
+// If the web application is 8, 7 or older than it, the browser does not support 'addEventListener' event. here we have to used 'attachEvent' instead of 'addEventlistener'. The DEMO is below:
+yourElement.attachEvent('onclick', function(){
+   // here write you code what you want to do
+});
+// the event name will start with'on' prefix
+// the 'attachEvent' must have to use
 
 
 
