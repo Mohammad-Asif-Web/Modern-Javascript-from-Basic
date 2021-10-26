@@ -43,11 +43,6 @@ body {
   } */
 
 
-
-
-
-
-
   /* Uncomment this for javascript DOM Element Section */
 /*   
   .wrapper {
@@ -118,17 +113,8 @@ body {
   } */
 
 
-
-
-
-
-
-
-
-
-
 /* Javascript Event Handling Section */
-button {
+/* button {
   background-color: #fff;
   border: none;
   text-transform: uppercase;
@@ -223,6 +209,21 @@ input {
 
 .black-bg {
   background-color: #000;
+} */
+
+
+
+.anim{
+  border: 1px solid aqua;
+  border-radius: 3px;
+  box-shadow: 0px 0px 25px 5px #fff;
 }
+
+
+
+
+
+
+
 
 
