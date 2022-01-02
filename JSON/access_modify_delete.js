@@ -19,5 +19,7 @@ console.log(`name : ${stdTwo}`);
 // console.log(modOne);
 // console.log(data);
 
-
+const stdNew = stData.student[1].friends[1]
+console.log(stdNew);
+// console.log(stData);
 
