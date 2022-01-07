@@ -32,3 +32,11 @@ console.log(data);
 const delStd = delete stData.student[0].languages //languages deleted
 console.log(`language: ${delStd}`);
 console.log(stData);
+
+// modify simpleText data
+const modText = data.friends[1].name = "brendan Eich" //data changes to John Doe from brendan Eich
+console.log(data);
+
+// modify student data
+const modStd = stData.student[0].cgpa = 4.84 // cgpa modified to 3.44 from 4.84
+console.log(stData);
