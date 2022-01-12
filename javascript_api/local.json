@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "Muhammad Asif",
+        "age": 27,
+        "student": true,
+        "country": "Bangladesh"
+    },
+    {
+        "id": 2,
+        "name": "John Doe",
+        "age": 43,
+        "student": false,
+        "country": "USA"
+    },
+    {
+        "id": 3,
+        "name": "Xavier Shroff",
+        "age": 38,
+        "student": false,
+        "country": "Scotland"
+    },
+    {
+        "id": 4,
+        "name": "Omar Han",
+        "age": 52,
+        "student": false,
+        "country": "Turkey"
+    },
+    {
+        "id": 1,
+        "name": "Amir Islam",
+        "age": 22,
+        "student": true,
+        "country": "Bangladesh"
+    },
+    {
+        "id": 6,
+        "name": "Kamran Akmal",
+        "age": 15,
+        "student": true,
+        "country": "Pakistan"
+    }
+]
