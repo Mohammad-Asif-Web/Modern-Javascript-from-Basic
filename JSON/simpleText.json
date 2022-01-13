@@ -1,12 +1,26 @@
-{
-    "friends": [
-        {
-            "name": "muhammad asif",
-            "age": 25
-        },
-        {
-            "name": "John Doe",
-            "age": 30
-        }
-    ]
-}
+[
+    {
+        "id": 1,
+        "name": "muhammad asif",
+        "age": 25,
+        "email": "asif@gmail.com"
+    },
+    {
+        "id": 2,
+        "name": "John Doe",
+        "age": 30,
+        "email": "john@gmail.com"
+    },
+    {
+        "id": 3,
+        "name": "patrick ",
+        "age": 43,
+        "email": "patrick22@gmail.com"
+    },
+    {
+        "id": 4,
+        "name": "jacob bob",
+        "age": 54,
+        "email": "jacob bob@gmail.com"
+    }
+]
