@@ -11,17 +11,26 @@ button.addEventListener('click', fetchData)
 
 function fetchData(){
     const xml = new XMLHttpRequest();
-    xml.open('GET', '../JSON/locl.json', true)
+    xml.open('GET', '../JSON/local.json', true)
 
     xml.onload = function(){
         if(this.status == 200){
-            try {
-                const data = this.responseText;
-                p.innerText = data
-                console.log(this.responseText);
-            } catch (e){
-                console.warn(`An Error Occured`);
+            const data = JSON.parse(this.responseText);
+            var output = '';
+            for (const i in data) {
+                output += `
+                <ul style="margin-top: 10px; list-style: none;padding: 10px">
+                <li>Id: ${data[i].id}</li>
+                <li>Name: ${data[i].name}</li>
+                <li>Age: ${data[i].age}</li>
+                <li>Student: ${data[i].student}</li>
+                <li>Country: ${data[i].country}</li>
+                </ul>
+                `    
             }
+            
+            p.innerHTML = output
+            console.log(this.responseText);
         }
         if(this.status == 404){
             const error = `404: Not Found`
@@ -35,6 +44,7 @@ function fetchData(){
     }
     xml.send();
 }
+
 
 
 
